@@ -1,0 +1,28 @@
+# Generic pimc g++ makefile
+
+CC      = g++
+LD      = g++
+
+RM      = /bin/rm -f
+
+PROG    = jk.e
+SOURCE  = jkTools.cpp jk.cpp
+OBJS    = $(SOURCE:.cpp=.o)
+HEADERS = jkTools.h
+
+# -------------------------------------------------------------------------------
+all: $(PROG)
+	
+
+# Link
+$(PROG): $(OBJS)
+	$(LD) $(OBJS) -o $(PROG)
+
+# Compile
+$(OBJS): $(SOURCE) 
+	$(CC)  -c $(SOURCE)
+
+# -------------------------------------------------------------------------------
+
+clean:
+	$(RM) $(PROG) $(OBJS) 
