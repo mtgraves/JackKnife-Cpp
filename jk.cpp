@@ -47,10 +47,10 @@ int main(){
 
         /* store specific heat data */
         dVec Cv1(numBins), Cv2(numBins), Cv3(numBins);
-        for (int i=0; i<numBins; i++){
-            Cv1[i] = allData[i][11];
-            Cv2[i] = allData[i][12];
-            Cv3[i] = allData[i][13];
+        for (int j=0; j<numBins; j++){
+            Cv1[j] = allData[j][11];
+            Cv2[j] = allData[j][12];
+            Cv3[j] = allData[j][13];
         }
 
         /* delete all unused data from memory */
